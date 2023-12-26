@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'book',
+    'tv_shows',
+
 ]
 
 MIDDLEWARE = [
