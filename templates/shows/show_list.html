@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    {%  include 'shows/header.html' %}
     <h1>Список фильмов и сериалов</h1>
     <ul>
         {% for i in shows %}
@@ -16,7 +10,7 @@
         </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+    {% include 'shows/footer.html' %}
+
 
 

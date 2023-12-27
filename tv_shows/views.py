@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from . import models
 from django.shortcuts import render
 
+
 # Create your views here.
 
 
@@ -17,3 +18,21 @@ def show_detail(request, id):
         show_id = get_object_or_404(models.Show, id=id)
         return render(request, template_name='shows/show_detail.html',
                       context={'show_id': show_id})
+
+
+def category_list(request):
+    if request.method == 'GET':
+        categories = models.Category.objects.all()
+        return render(request, template_name='shows/categories.html',
+                      context={'categories': categories})
+
+
+def category_show_list(request, category_id):
+    category = get_object_or_404(models.Category, id=category_id)
+    shows = category.shows.all()
+    context = {
+        'category': category,
+        'shows': shows
+    }
+    return render(request, template_name='shows/category_shows.html',
+                  context = context)

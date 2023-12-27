@@ -1,0 +1,15 @@
+{% include 'shows/header.html' %}
+
+<h1>{{ category.title }}</h1>
+<ul>
+    {% for show in shows %}
+        <h1>Подробнее об {{ show.title }}</h1>
+        <img src="{{ show.image.url }}" alt="">
+        <p>{{ show.description }}</p>
+        <p>{{ show.genre }}</p>
+        <p>{{ show.price }}</p>
+        <p>{{ show.author }}</p>
+        <a href="{{ show.trailer }}">Перейти по ссылке</a>
+        <p>{{ show.created_at }}</p>
+    {% endfor %}
+</ul>

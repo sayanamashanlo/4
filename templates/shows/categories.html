@@ -1,0 +1,10 @@
+{% include 'shows/header.html' %}
+
+<h1>caregories</h1>
+
+{% for category in categories %}
+    <ul>
+        <p><a href="{% url 'category_shows' category.id %}" class="btn btn-primary">{{ category.title }}
+></a></p>
+    </ul>
+{% endfor %}
