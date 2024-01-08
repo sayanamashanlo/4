@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'book',
     'tv_shows',
+    'parser_app'
 
 ]
 
