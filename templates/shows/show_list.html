@@ -1,7 +1,7 @@
     {%  include 'shows/header.html' %}
     <h1>Список фильмов и сериалов</h1>
     <ul>
-        {% for i in shows %}
+        {% for i in object_list %}
         <li>
             <h2>{{i.title}}</h2>
             <img src="{{i.image.url}}" alt="">

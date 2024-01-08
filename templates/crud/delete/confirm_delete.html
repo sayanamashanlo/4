@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Вы уверены что хотите удалить этот обьект?</h1>
+<form mehtod="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <button type="submit">Да</button>
+</form>
+            <a href="/">Нет</a>
+</body>
+</html>
