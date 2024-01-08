@@ -12,6 +12,6 @@ class ParserBookView(FormView):
         form = self.form_class(request.POST)
         if form.is_valid():
             form.parser_data()
-            return HttpResponse('Данные взять')
+            return HttpResponse('Данные взяты')
         else:
             return super(ParserBookView).post(request, *args, **kwargs)

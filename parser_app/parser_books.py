@@ -19,15 +19,15 @@ def get_html(url, params=''):
 def get_data(html):
     soup = BS(html, 'html.parser')
     items = soup.find_all('div', class_='e4xwgl-0 iJwsmp')
-    books = []
+    book = []
 
     for item in items:
-        books.append({
+        book.append({
             'title_name': item.find('div', class_='e4xwgl-1 gEQwGK').get_text(),
-            'descriptions': item.find('div', class_='e4xwgl-5 dgfgnj').get_text()
+            'description': item.find('div', class_='e4xwgl-5 dgfgnj').get_text()
         })
 
-    return books
+    return book
 
 
 @csrf_exempt
