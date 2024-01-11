@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CLOTHES</title>
+</head>
+<body>
+<h1>all clothes</h1>
+<a href="/male_cloth/">для мужчин</a>
+<a href="/female_cloth/">для женщин</a>
+<a href="/kids_cloth/">для детей</a>
+<a href="/uni_cloth/">универсальный</a>
+<ul>
+    {% for i in object_list %}
+    <li>
+        <h1>{{i.name}}</h1>
+        {% for tag in i.tags.all %}
+        <h2>#{{tag.name}}</h2>
+        {% endfor %}
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
