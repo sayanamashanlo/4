@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,11 +41,16 @@
                         </li>
                         <li><a class="dropdown-item" href="/show_list_delete/">Удалить</a></li>
                     </ul>
-                    <form action="{% url 'shows:search' %}" method="GET" class="d-flex" role="search">
-                        <input class="form-control me-2" type="text" name="q" type="search" placeholder="Поиск"
-                               aria-label="Поиск">
-                        <button class="btn btn-outline-success" type="submit">Поиск</button>
-                    </form>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/">Перейти в Админку</a>
+                    <a class="nav-link" href="/login/">Авторизация</a>
+                </li>
+            </ul>
+                <form action="{% url 'shows:search' %}" method="GET" class="d-flex" role="search">
+                    <input class="form-control me-2" type="text" name="q" type="search" placeholder="Поиск"
+                           aria-label="Поиск">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
         </div>
     </div>
 </nav>

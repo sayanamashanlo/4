@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Авторизация</h1>
+<center>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Авторизация</button>
+        <button><a href="/register/">У вас есть аккаунт?</a></button>
+    </form>
+
+</center>
+</body>
+</html>
